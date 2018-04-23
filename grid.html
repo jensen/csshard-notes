@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CSS: Grid</title>
+  <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #81DCD2;
+      font-family: 'Neuton', serif;
+      color: #EDF3F2;
+    }
+
+    div[class*='col-']:nth-child(odd) {
+      background-color: #879391;
+    }
+
+    div[class*='col-']:nth-child(even) {
+      background-color: #7A7C7B;
+    }
+
+    div.container {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+    <div class="col-1">1/12</div>
+  </div>
+  <div class="row">
+    <div class="col-2">2/12</div>
+    <div class="col-2">2/12</div>
+    <div class="col-2">2/12</div>
+    <div class="col-2">2/12</div>
+    <div class="col-2">2/12</div>
+    <div class="col-2">2/12</div>
+  </div>
+  <div class="row">
+    <div class="col-3">3/12</div>
+    <div class="col-3">3/12</div>
+    <div class="col-3">3/12</div>
+    <div class="col-3">3/12</div>
+  </div>
+  <div class="row">
+    <div class="col-4">4/12</div>
+    <div class="col-4">4/12</div>
+    <div class="col-4">4/12</div>
+  </div>
+  <div class="row">
+    <div class="col-6">6/12</div>
+    <div class="col-6">6/12</div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">Navigation</div>
+    </div>
+    <div class="row">
+      <div class="col-3 sidebar">
+        Sidebar
+      </div>
+      <div class="col-9 content">
+        Content
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">Footer Column</div>
+      <div class="col-4">Footer Column</div>
+      <div class="col-4">Footer Column</div>
+    </div>
+  </div>
+</body>
+</html>

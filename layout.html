@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CSS: Layout</title>
+  <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #3B6669;
+      font-family: 'Neuton', serif;
+    }
+
+    div.header {
+      color: #EDF3F2;
+      height: 80px;
+    }
+
+    div.main {
+      height: 100%;
+      margin-bottom: -80px;
+    }
+
+    div.sidebar {
+      height: 100%;
+      background-color: #ddd;
+    }
+
+    div.content {
+      height: 100%;
+      background-color: #fff;
+    }
+
+    div.header img {
+      height: 80px;
+      width: 80px;
+    }
+
+    span.logo {
+      float: left;
+      height: 80px;
+    }
+
+    span.title {
+      float: left;
+      font-size: 2.5rem;
+      line-height: 80px;
+    }
+
+    div.compose {
+      padding-right: 20px;
+      line-height: 80px;
+      text-align: right;
+    }
+
+    div.compose button {
+      background-color: #EDF3F2;
+      border-radius: 6px;
+      border: 2px solid #3B6669;
+      color: #3B6669;
+      padding: 10px 20px;
+    }
+
+    div.compose button:hover {
+      background-color: #82DCD2;
+      color: #EDF3F2;
+      cursor: pointer;
+    }
+
+    div.compose button:active {
+      background-color: #EDF3F2;
+      color: #3B6669;
+    }
+
+    div.compose button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col-6">
+      <div class="header">
+        <span class="logo">
+          <img src="images/twitter.svg">
+        </span>
+        <span class="title">Tweeter</span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="compose">
+        <button>Compose</button>
+      </div>
+    </div>
+  </div>
+  <div class="row main">
+    <div class="col-2 sidebar"></div>
+    <div class="col-8 content">
+    </div>
+    <div class="col-2 sidebar"></div>
+  </div>
+</body>
+</html>

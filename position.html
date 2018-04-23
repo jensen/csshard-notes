@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CSS: Positioning</title>
+  <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Neuton', serif;
+      background-color: #EEF2F2;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      color: #72D6C8;
+    }
+
+    div.container {
+      border: 1px dashed #2E5358;
+    }
+
+    div.container {
+      padding: 10px;
+    }
+
+    div.box {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: #2E5358;
+      vertical-align: middle;
+    }
+
+    div.box:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    div.highlight {
+      background-color: #72D6C8;
+    }
+
+    div.offset {
+      top: 20px;
+      left: 20px;
+    }
+
+    div.absolute {
+      position: absolute;
+    }
+
+    div.relative {
+      position: relative;
+    }
+
+    div.fixed {
+      position: fixed;
+    }
+
+    div.positioned {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>Static</h1>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box highlight"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <h1>Absolute</h1>
+  <div class="container positioned">
+    <div class="box"></div>
+    <div class="box absolute offset highlight"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <h1>Fixed</h1>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box fixed highlight"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <h1>Relative</h1>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box relative offset highlight"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>

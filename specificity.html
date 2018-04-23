@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CSS: Specificity</title>
+  <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Neuton', serif;
+      font-size: 4rem;
+      background-color: #151515;
+      padding: 2rem;
+    }
+
+    div.warning p {
+      color: cyan;
+    }
+
+    body#home .container p {
+      color: magenta;
+    }
+
+    p {
+      color: yellow;
+    }
+
+    div#caution p {
+      color: white;
+    }
+  </style>
+</head>
+<body id="home">
+  <div class="warning">
+    <p>div.warning p / 0, 1, 2</p>
+  </div>
+
+  <div class="container">
+    <p>body#home .container p / 1, 1, 2</p>
+  </div>
+
+  <p>p / 0, 0, 1</p>
+
+  <div id="caution">
+    <p>div#caution p / 1, 0, 2</p>
+  </div>
+</body>
+</html>
