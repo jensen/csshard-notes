@@ -25,7 +25,7 @@ HTML is by default responsive. It is the addition of styles that can remove the 
 
 ### static
 
-This is the default behaviour for all HTML elements. 
+This is the default behaviour for all HTML elements.
 
 ### relative
 
@@ -66,13 +66,13 @@ div p, #id:first-line {
 
 This is a [group selector](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors). Two selectors separated by a comma. In this example any `paragraph` that has a `div` as an ancestor and the first line of element with the id `#id` would match the pattern.
 
-We can be quite specific about which element we are trying to target. We can combine a tag and a class like `div.primary`. We can also use combinators and extend our ability to target elements more specifically. If we want to target a paragraph that is a decendant of a div we could use `div p`. 
+We can be quite specific about which element we are trying to target. We can combine a tag and a class like `div.primary`. We can also use combinators and extend our ability to target elements more specifically. If we want to target a paragraph that is a decendant of a div we could use `div p`.
 
 With so many options it is easy to get confused. There is a difference between `div.primary` and `div .primary`. A simple space character turns it into a combinator.
 
 ## Specificity
 
-When the browser applies styles properties to an element it uses the [specificity](http://cssspecificity.com/) to resolve multiple matches for the same property. 
+When the browser applies styles properties to an element it uses the [specificity](http://cssspecificity.com/) to resolve multiple matches for the same property.
 
 ```css
 div p {
@@ -90,9 +90,9 @@ p {
 </div>
 ```
 
-Apply the specificity rules to the example CSS.  We can determine that the `div p` has a specificity of 2, while the `div` has a specificity of 1. The way that it is determined is by identifying the number of ID selectors, class selectors and type selectors in the overall selector. There are other selectors used, but for the purposes of learning how to determine the specificity these three are enough. 
+Apply the specificity rules to the example CSS.  We can determine that the `div p` has a specificity of 2, while the `div` has a specificity of 1. The way that it is determined is by identifying the number of ID selectors, class selectors and type selectors in the overall selector. There are other selectors used, but for the purposes of learning how to determine the specificity these three are enough.
 
-ID selectors > class selectors > type selectors. 
+ID selectors > class selectors > type selectors.
 
 Think of a 3 digit number:
 
@@ -100,7 +100,7 @@ Think of a 3 digit number:
 2. The number of class selectors is used as the 'tens' digit.
 3. Finally the number of ID selectors (one I hope) is used as the 'hundreds' digit.
 
-With the example of `div p` you would have a specificity of 002. If you added a class `div.warning p` then the specificity is 012. 
+With the example of `div p` you would have a specificity of 002. If you added a class `div.warning p` then the specificity is 012.
 
 ```
 p                       001
@@ -126,7 +126,7 @@ Placing your styles inline is an anti-pattern. It doesn't allow for composibilty
 
 ### !important
 
-> Disclaimer: The use of !important should be reserved for the most extreme cases. If you use !important too much then how do we know what is important anymore? 
+> Disclaimer: The use of !important should be reserved for the most extreme cases. If you use !important too much then how do we know what is important anymore?
 
 If you tag a property with the `!important` suffix it will increase it's importance. More specific selectors will not be allowed to assign a value to the property, unless they too are marked as !important.
 
@@ -150,7 +150,7 @@ The primary concept used to design complex layouts is the 'Grid'. It allows desi
 
 ### Grid
 
-The earliest grid implementations relied on the `float` property for block-level elements. The most common grid impelementations were 12 columns. If we take 100% and divide it by 12 we get 8.333333333333333%, the width of each column. 
+The earliest grid implementations relied on the `float` property for block-level elements. The most common grid impelementations were 12 columns. If we take 100% and divide it by 12 we get 8.333333333333333%, the width of each column.
 
 ```html
 <div class="row">
@@ -167,13 +167,13 @@ The earliest grid implementations relied on the `float` property for block-level
 </div>
 ```
 
-The 12 column grid became popular because of the number of configuration options it provides. In the above exmaple we start with a full width navigation bar. We split our main window into 2 columns. The sidebar and the main content. Finally we have a footer that provides 3 equally sized columns of content.
+The 12 column grid became popular because of the number of configuration options it provides. In the above example we start with a full width navigation bar. We split our main window into 2 columns. The sidebar and the main content. Finally we have a footer that provides 3 equally sized columns of content.
 
 ### Learn Flexbox
 
-CSS is not easy. It's also improving at a pretty steady rate. We are limited by what browsers will implement. It is important to get in the habit of consistetly reviewing the new features of CSS and spending the time to learn them. 
+CSS is not easy. It's also improving at a pretty steady rate. We are limited by what browsers will implement. It is important to get in the habit of consistetly reviewing the new features of CSS and spending the time to learn them.
 
-[Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is well supported and it solves a problem that developers have dealt with for many years. It would be irresponsible to try and teach Flexbox before going through the foundation of CSS. 
+[Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is well supported and it solves a problem that developers have dealt with for many years. It would be irresponsible to try and teach Flexbox before going through the foundation of CSS.
 
 There is also an official grid implementation that does not have the same level of browser support as Flexbox. I don't think the question is 'Should I learn flexbox or should I learn grid?'. Learn both and use the one that makes sense for your layout.
 
